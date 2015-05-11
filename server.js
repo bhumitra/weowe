@@ -82,11 +82,20 @@ var userSchema = new Schema({
 {collection:"user"});
 
 
+var accSchema = new Schema({
+    "Customer Name": String,
+    "Account #": Number,
+    "Premise Address": String,
+    "Account Balance": String
+},
+    { collection: "Book2" });
+
 
 
 // Model creation
 
-var User = mongoose.model("User",userSchema);
+var User = mongoose.model("User", userSchema);
+var Acc = mongoose.model("Acc", accSchema);
 
 
 //----------------------------------------------------------------------
@@ -195,6 +204,62 @@ app.post('/rest/register', function(req, res)
 		      
 		    });
 });
+
+
+
+app.post('/rest/registerExtra', function (req, res) {
+    console.log('in rest/registerExtra');
+
+    var newUser = req.body;
+
+    if (newUser.need) {
+        newUser.need.amountReceived = 0;
+        newUser.role = "both";
+    }
+    else {
+        newUser.role = "donor";
+    }
+
+    console.log(newUser);
+
+    Acc.findOne({ "Account #": newUser.username }, function (err, user) {
+
+        if (err) {
+            console.log(err);
+            return next(err);
+        }
+
+        console.log(user);
+        if (!user) {
+            console.log('this acc no is ineligible for help')
+            //console.log(user.username);
+            res.json(null);
+            return;
+        }
+
+        var newUser = new User(req.body);
+
+        newUser.save(function (err, newUser) {
+
+            JSON.stringify(newUser)
+
+            /*
+                var user = {};
+                user._id = newUser._id;
+                user.username = newUser.username;
+                user.password = newUser.password;*/
+
+            req.login(newUser, function (err) {
+                if (err) { return next(err); }
+                res.json(newUser);
+            });
+        });
+
+
+    });
+});
+
+
 
 var auth = function(req, res, next)
 {

@@ -36,11 +36,12 @@
 					  </ul>
 					
 					  <div class="tab-content center-block" ng-show="selectedTab == 1">
-					   	    <h2 class="text-grey"> {{user.first}}  {{user.last}} </h4>
+					   	    <h2 class="text-grey"> {{user.first}}  {{user.last}} </h2>
+                          <h2 class="text-grey"> {{user.username}}  </h2>
 				            <h4 class="text-grey"> <span ng-show="user.need.summary"> Recipient</span> <span ng-show="user.donationGiven.length || !receiver"> Donor</span>   </h4> 
 				        	
-				            <h4 class="text-grey" ng-show ="receiver"> Amount needed: $ {{amount}}</h3>
-				            <h4 class="text-grey" ng-show ="receiver"> Amount received: $ {{receivedAmount}}</h3>
+				            <h4 class="text-grey" ng-show ="receiver"> Amount needed: $ {{amount}}</h4>
+				            <h4 class="text-grey" ng-show ="receiver"> Amount received: $ {{receivedAmount}}</h4>
 				            
 	            
 					  </div>

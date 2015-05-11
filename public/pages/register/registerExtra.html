@@ -33,14 +33,14 @@
 
 
             <div class="form-group">
-                    <label for="username">User Name</label>
-                    <div class="input-group">
-                        <input ng-model="newuser.username" type="text" class="form-control" name="userName" id="userName" placeholder="User Name" required>
-                        <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
-                        <span ng-show="myForm.user.$error.required">User Name is required.</span>
+                <label for="username">Water Bill Account Number</label>
+                <div class="input-group">
+                    <input ng-model="newuser.username" type="text" class="form-control" name="userName" id="userName" placeholder="Water Bill Acc. No." required>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
+                    <span ng-show="myForm.user.$error.required">Water bill account number is required.</span>
 
-                    </div>
                 </div>
+            </div>
 
                 <div class="form-group">
                     <label for="pwd">Password </label>
@@ -76,7 +76,7 @@
 				 <div class="form-group">
                     <label for="address">Address</label>
                     <div class="input-group">
-                        <input ng-model="newuser.address" type="text" class="form-control" name="address" id="address" placeholder="San Jose, CA" required>
+                        <input ng-model="newuser.address" type="text" class="form-control" name="address" id="address" placeholder="Detroit, MI" required>
                         <span class="input-group-addon"><span class="glyphicon glyphicon-asterisk"></span></span>
                         <span ng-show="myForm.user.$error.required">Address is required.</span>
 
@@ -95,38 +95,16 @@
 				 <div class="col-md-6" >
                		<img ng-src="{{loc}}" width="100" height="100" class="avatar img-thumbnail pull-right" alt="avatar">
               	 </div>
-            <br />
-            <br />
-            <br />
-            <br />
-
-
-            <div class="form-group text-center">
-
-                <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info center">
-            </div>
-				<!--	
-				<div class="form-group">
-	               
-	              <input type="checkbox" name="recepient" ng-model="recepient"> I am a recipient and need help paying my water bill <br>
-	              
-                </div>
+					
+					
+				
                 
-				<div class="form-group" ng-show="recepient">
+				<div class="form-group" >
 	                    <label for="needCategory">Choose the category that most suits you 
 	                     </label>
 	                    <div >
 	                    	<select ng-model="newuser.need.category" class="form-control" required>
-	                     	<option value="sfather">Single father</option>
-							<option value="smother">Single Mother</option>
-						    <option value="senior">Senior Citizens </option>
-							<option value="kids">kids</option>
-						    <option value="family">Families</option>
-							<option value="disbaled">Disabled</option>
-						    <option value="education">Education</option>
-					        <option value="medical">Medical Treatment</option>
-						 
-							<option value="other">Other</option>
+							<option value="other">Water Bill Payment</option>
  							</select>
 	
 	                    </div>
@@ -134,7 +112,7 @@
                
                 
 				
-				 <div class="form-group" ng-show="recepient">
+				 <div class="form-group" >
 	                    <label for="needSummary">Summary of your need </label>
 	                    <div class="input-group">
 	                        <input ng-model="newuser.need.summary" type="text" class="form-control" name="needSummary" id="needSummary" placeholder="one line desciption of your need" ng-required="recepient">
@@ -144,7 +122,7 @@
 	                    </div>
                 </div>
 
-                <div class="form-group" ng-show="recepient">
+                <div class="form-group" >
                     <label for="needAmount">Amount you need </label>
                     <div class="input-group">
                         <input ng-model="newuser.need.amount" type="number" min="1" class="form-control" name="needAmount" id="needAmount" placeholder="Specify the amount you need in $" ng-required="recepient">
@@ -154,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="form-group" ng-show="recepient">
+                <div class="form-group">
                     <label for="needText"> Brief description of your need </label>
                     <div class="input-group">
                         <textarea ng-model="newuser.need.text" type="text" class="form-control" name="needText" id="needText" rows="6" placeholder="Describe your need" ng-required="recepient"> </textarea>
@@ -165,8 +143,11 @@
                 </div>
 
             
-               
-                     -->
+                <div class="form-group">
+
+                    <input type="submit" name="submit" id="submit" value="Submit" class="btn btn-info pull-right">
+                </div>
+
  
                 <div class="form-group">
                     <br />
@@ -175,10 +156,10 @@
  					 <br />
                     <span ng-show="passwordNotMatchMessage" id="dangerMsg"> <b> Password and retyped password do not match.</b></span>
 
-                    <span ng-show="userExistsMessage" id="dangerMsg"> <b>This user name is already taken. Please enter some other user name</b></span>
+                    <span ng-show="userExistsMessage" id="dangerMsg"> <b>This Account Number is not eligible to register as a recipient.</b></span>
 
                     </div>
-               
+                
 		 </form>
 	 </div>
 	 

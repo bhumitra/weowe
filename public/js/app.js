@@ -26,6 +26,12 @@ app.config(function($routeProvider, $httpProvider){
 
          })
 
+        .when('/registerExtra', {
+            templateUrl: 'pages/register/registerExtra.html',
+            controller: 'RegisterCtrl'
+
+        })
+
          .when('/publicprof/:username', {
              templateUrl: 'pages/profile/publicProfile.html',
              controller:'PublicProfileCtrl' 

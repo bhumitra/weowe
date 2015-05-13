@@ -15,37 +15,38 @@
         	  	<div class="tabbable tabs-below">
 					  <ul class="nav nav-pills">
 					    <li ng-class="{active: selectedTab == 1}">
-					      <a href="#/profile" ng-click="selectedTab = 1;">Me</a>
+					      <a class="paratxt2" href="#/profile" ng-click="selectedTab = 1;">Me</a>
 					    </li>
 					    <li ng-show="receiver" ng-class="{active: selectedTab == 2}">
-					      <a href="#/profile" ng-click="selectedTab = 2;">Received</a>
+                            <a class="paratxt2" href="#/profile" ng-click="selectedTab = 2;">Received</a>
 					    </li>
 					    <li   ng-class="{active: selectedTab == 3}">
-					      <a href="#/profile" ng-click="selectedTab = 3;">Donated</a>
+                            <a class="paratxt2" href="#/profile" ng-click="selectedTab = 3;">Donated</a>
 					    </li>
 					      <li ng-class="{active: selectedTab == 4}">
-					      <a href="#/profile" ng-click="selectedTab = 4;">Bookmarks</a>
+                    <a class="paratxt2" href="#/profile" ng-click="selectedTab = 4;">Bookmarks</a>
 					    </li>
 					      <li ng-class="{active: selectedTab == 5}">
-					      <a href="#/profile" ng-click="selectedTab = 5;">Followings</a>
+                    <a class="paratxt2" href="#/profile" ng-click="selectedTab = 5;">Followings</a>
 					    </li>
 					    <li ng-class="{active: selectedTab == 6}">
-					      <a href="#/profile" ng-click="selectedTab = 6;">Followers</a>
+                            <a class="paratxt2" href="#/profile" ng-click="selectedTab = 6;">Followers</a>
 					    </li>
 					    
 					  </ul>
 					
 					  <div class="tab-content center-block" ng-show="selectedTab == 1">
-					   	    <h2 class="text-grey"> {{user.first}}  {{user.last}} </h2>
-                          <h2 class="text-grey"> {{user.username}}  </h2>
-				            <h4 class="text-grey"> <span ng-show="user.need.summary"> Recipient</span> <span ng-show="user.donationGiven.length || !receiver"> Donor</span>   </h4> 
+					   	    <h2 > {{user.first}}  {{user.last}} </h2>
+                          <h2 > {{user.username}}  </h2>
+                          <br />
+				            <h4 class="paratxt"> <span ng-show="user.need.summary"> Recipient</span> <span ng-show="user.donationGiven.length || !receiver"> Donor</span>   </h4> 
 				        	
-				            <h4 class="text-grey" ng-show ="receiver"> Amount needed: $ {{amount}}</h4>
-				            <h4 class="text-grey" ng-show ="receiver"> Amount received: $ {{receivedAmount}}</h4>
+				            <h4 class="paratxt" ng-show ="receiver"> Amount needed: $ {{amount}}</h4>
+				            <h4 class="paratxt" ng-show ="receiver"> Amount received: $ {{receivedAmount}}</h4>
 				            
 	            
 					  </div>
-  						<div class="tab-content text-grey" ng-show="selectedTab == 2">
+  						<div class="tab-content " ng-show="selectedTab == 2">
  				        	<div ng-show= user.donationReceived.length>  
 				        	<table class="table table-condensed">
 				       			 <thead>
@@ -70,7 +71,7 @@
 			        	  </div> 
 			        	  
 			        	   <div ng-hide= user.donationReceived.length>
-			        	   <h3 class="text-cadetBlue">You have not received any donation till now. 
+			        	   <h3 class="">You have not received any donation till now. 
 			        	    Please be patient. Someone would help </h3>
 			        	 </div> 
 			        	  
@@ -109,7 +110,7 @@
 			        	  </div> 
 			        	  
 			        	  <div ng-hide= user.donationGiven.length>
-			        	   <h3 class="text-cadetBlue">You have not donated to anybody. Give a helping hand to someone if you can ! </h3>
+			        	   <h3 class="">You have not donated to anybody. Give a helping hand to someone if you can ! </h3>
 			        	 </div> 
   
 		 			</div>
@@ -129,7 +130,7 @@
  			        	</div>
 			        	  
  						<div ng-hide= user.bookmarked.length>
-			               <h3 class="text-cadetBlue">You have not bookmarked anyone. Bookmark your favourite recipient ! </h3>
+			               <h3 class="">You have not bookmarked anyone. Bookmark your favourite recipient ! </h3>
 			        	    
 			        	 </div> 
 		 			

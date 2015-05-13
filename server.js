@@ -104,12 +104,7 @@ var Acc = mongoose.model("Acc", accSchema);
 
 passport.use(new LocalStrategy(
 function(username, password, done)
-{
-    console.log("I am in startegy");
-   // console.log(username);
-   // console.log(password);
-  
-    
+{  
     User.findOne({username: username, password: password}, function(err, user)
     {
 	      if (err) { return done(err); }

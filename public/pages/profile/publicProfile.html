@@ -13,8 +13,8 @@
         		</div>
         		
         		<div class="col-md-6 text-center">
-        			 <h2 class="text-grey text-center"> {{user.first}}  {{user.last}} </h2>
-                    <h2 class="text-grey text-center"> {{user.username}}  </h2>
+        			 <h2 class="text-center"> {{user.first}}  {{user.last}} </h2>
+                    <h2 class=" text-center"> {{user.username}}  </h2>
         			
         		</div>
         		
@@ -45,35 +45,35 @@
         	<div class="col-md-8 center-block">
         		
         	  	<div class="tabbable tabs-below">
-					  <ul class="nav nav-pills">
+					  <ul class="nav nav-pills ">
 					    <li ng-class="{active: selectedTab == 1}">
-					      <a href="#/publicprof/{{user.username}}" ng-click="selectedTab = 1;">About</a>
+					      <a class="paratxt2" href="#/publicprof/{{user.username}}" ng-click="selectedTab = 1;">About</a>
 					    </li>
 					    <li ng-show="receiver" ng-class="{active: selectedTab == 2}">
-					      <a href="#/publicprof/{{user.username}}" ng-click="selectedTab = 2;">Donations Received</a>
+                            <a class="paratxt2" href="#/publicprof/{{user.username}}" ng-click="selectedTab = 2;">Donations Received</a>
 					    </li>
 					    <li ng-class="{active: selectedTab == 3}">
-					      <a href="#/publicprof/{{user.username}}" ng-click="selectedTab = 3;">Bookmarks</a>
+                            <a class="paratxt2" href="#/publicprof/{{user.username}}" ng-click="selectedTab = 3;">Bookmarks</a>
 					    </li>
 					     <li ng-class="{active: selectedTab == 4}">
-					      <a href="#/publicprof/{{user.username}}" ng-click="selectedTab = 4;">Followings</a>
+                        <a class ="paratxt2" href="#/publicprof/{{user.username}}" ng-click="selectedTab = 4;">Followings</a>
 					    </li>
 					    <li ng-class="{active: selectedTab == 5}">
-					      <a href="#/publicprof/{{user.username}}" ng-click="selectedTab = 5;">Followers</a>
+                            <a class="paratxt2" href="#/publicprof/{{user.username}}" ng-click="selectedTab = 5;">Followers</a>
 					    </li>
 					  </ul>
 					
 					  <div class="tab-content" ng-show="selectedTab == 1">
 					   	    
-					   	    <h4 class="text-grey"> Hi, My name is {{user.first}}. I live in {{user.address}}.</h4>
+					   	    <h4 class="paratxt"> Hi, My name is {{user.first}}. I live in {{user.address}}.</h4>
 					   	    
-					   	     <h4 class="text-grey"> I am a <span ng-show="user.need.summary"> Recipient</span> <span ng-show="user.donationGiven.length || !receiver"> Donor</span> .
-					   	        <span ng-show="user.need.summary">Please check  <a href="#/viewDetail/{{user._id}}">my Need Profile</a></span>
+					   	     <h4 class="paratxt"> I am a <span ng-show="user.need.summary"> Recipient</span> <span ng-show="user.donationGiven.length || !receiver"> Donor</span> .
+					   	        <span ng-show="user.need.summary">Please check  <a style="color:lightgreen" href="#/viewDetail/{{user._id}}">my Need Profile</a></span>
 					   	       
 					   	     
 					   	      </h4> 
 					   	    
- 					   	    <h4 class="text-grey">You can reach me at {{user.email}} </h4>
+ 					   	    <h4 class="paratxt">You can reach me at {{user.email}} </h4>
 	        				
 				        	
 	            
@@ -113,7 +113,7 @@
 			        	  
 			        	    
 			        	   <div ng-hide= user.donationReceived.length>
-			        	   <h3 class="text-cadetBlue">This user has not received any donation. 
+			        	   <h3 >This user has not received any donation. 
 			        	   </h3>
 			        	 </div> 
 			        	  </div>
@@ -135,7 +135,7 @@
 			        	</div>
 			        	  
  						<div ng-hide= user.bookmarked.length>
-			               <h3 class="text-cadetBlue"> No bookmarks available :( </h3>
+			               <h3 > No bookmarks available :( </h3>
 			        	    
 			        	 </div> 
 		 			
@@ -154,7 +154,7 @@
 			        	</div>
 			        	  
  						<div ng-hide= user.following.length>
-			               <h3 class="text-cadetBlue"> This user has not followed anybody yet. </h3>
+			               <h3 > This user has not followed anybody yet. </h3>
 			        	    
 			        	 </div> 
 		 			
@@ -172,7 +172,7 @@
 			        	</div>
 			        	  
  						<div ng-hide= user.follower.length>
-			               <h3 class="text-cadetBlue"> This user does not have any followers. </h3>
+			               <h3 > This user does not have any followers </h3>
 			        	    
 			        	 </div> 
 		 			
@@ -196,10 +196,10 @@
 </div >
 		
 	<div class="container">
-      <h1 class="text-white text-center" ng-show ="receiver"> $ {{amount}} <small> Needed </small></h3>
+      <h3 class="text-center" ng-show ="receiver"> $ {{amount}} Needed </h3>
       
       
-  	  <h1 class="text-white text-center " ng-show ="receiver"> $ {{receivedAmount}} <small> Received so far </small></h1>
+  	  <h3 class="text-center" ng-show ="receiver"> $ {{receivedAmount}}  Received so far </h3>
       </div>
 			
 	

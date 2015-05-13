@@ -87,23 +87,7 @@
                     <ul class="nav navbar-nav navbar-left">
 
                         <li><a href="#/home">Home</a></li>
-                       
-                        <!--
-                            
-                             <li><a href="#/view/all">All Receipients</a></li>
-                        
-                         <li class="dropdown">
-                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"> Recipients <span class="caret"></span></a>
-                            <ul class="dropdown-menu" role="menu">
-
-                                <li><a href="#/view/family">Poor Families</a></li>
-
-
-                                <li class="divider"></li>
-                                <li><a href="#/view/all">View All</a></li>
-                            </ul>
-                         </li>
-                            -->
+                  
                         <li ng-show="currentUser"><a href="#/profile"> My Profile </a></li>
                         <li><a ng-show="currentUser" href="#/settings"> Settings </a></li>
                         <li><a href="#/contact">Contact</a></li>
@@ -120,25 +104,7 @@
 
                     </form>
 
-                <!--
-                    <div class="container" id="loginForm">
-                        <form class="navbar-form navbar-right" id="loginForm" ng-hide="currentUser">
-
-                            <div class="form-group">
-                                <input ng-model="user.username" type="text" placeholder="Username" class="form-control">
-                            </div>
-                            <div class="form-group">
-                                <input ng-model="user.password" type="password" placeholder="Password" class="form-control">
-                            </div>
-
-                            <button ng-click="login(user)" type="button" class="btn btn-primary">Sign In</button>
-
-                            <button ng-click="go('/register')" type="button" class="btn btn-success">Sign Up</button>
-
-
-                        </form>
-                    </div>
-                    -->
+             
                 </div><!--/.nav-collapse -->
             </div>
         </div>
@@ -147,6 +113,7 @@
     <div ng-view>
 
     </div>
+
     <div class="container">
         <hr />
         <div class="footer">

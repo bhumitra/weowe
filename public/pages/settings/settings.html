@@ -4,23 +4,19 @@
     <div class="container padtop70">
     <div class="row">
 	
-	  <div class="col-lg-1">
-	  </div>
-	  
-	  <div class="col-lg-2" >
+	  <div class="col-lg-3" >
 	       <form name="frmUpload" id ="frmUpload">
 	       
-	  		<img ng-src="{{user.imgurl}}" width="150" height="150" class="avatar img-thumbnail" alt="avatar">
+	  		    <img ng-src="{{user.imgurl}}" width="150" height="150" class="avatar img-thumbnail" alt="avatar"  >
 	        
-	          <input ng-model="photo"  name="myFile" class="form-control hidden" id="filePicker"   type="file">
+	          <input ng-model="photo"  name="myFile" class="form-control hidden" id="filePicker" type="file">
 	          
 	          <!-- Fake field to fool the user -->
     		   <input type="text" name="txtFakeText" class = "hidden" readonly="true">
      			
    		 	
    			  	
-			    <input type="button"  onclick="HandleFileButtonClick();" 
-      			   value="Upload new pic" id="uploadButton" class ="btn-primary">	
+			    <input type="button"  onclick="HandleFileButtonClick();" value="Change Pic" id="uploadButton" class ="btn-primary">	
       			  
       		       
 			</form>
@@ -34,10 +30,10 @@
         	<div class="tabbable tabs-below">
 			  <ul class="nav nav-pills">
 			    <li ng-class="{active: selectedTab == 1}">
-			      <a href="#/settings" ng-click="selectedTab = 1;">Account Settings</a>
+                    <a class="paratxt2" href="#/settings" ng-click="selectedTab = 1;">Account Settings</a>
 			    </li>
 			    <li ng-class="{active: selectedTab == 2}">
-			      <a href="#/settings" ng-click="selectedTab = 2;">Edit Profile</a>
+                    <a class="paratxt2" href="#/settings" ng-click="selectedTab = 2;">Edit Profile</a>
 			    </li>
 			    
 			  </ul>
@@ -169,11 +165,7 @@
 			  
 			  
 			 </div> 
-			  
-             
-            
-                
- 
+
                 <div class="form-group">
                    <br />
                     <br />
